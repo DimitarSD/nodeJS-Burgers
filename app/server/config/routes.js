@@ -1,6 +1,7 @@
 'use strict';
 
-var services = require('../services');
+var services = require('../services'),
+    path = require('path');
 
 module.exports = function(app, db) {
     // Routes 
