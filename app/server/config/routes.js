@@ -11,4 +11,9 @@ module.exports = function(app, db) {
     app.get('/burger/:name', services.BurgerServices.getBurgerByName);
     app.get('/burger/ingredients/:ingredients', services.BurgerServices.getBurgerWithIngredients);
     app.get('/burger/id/:burgerId', services.BurgerServices.getBurgerById);
+
+    // Favicon
+    app.get('/favicon.ico', function (req, res) {
+        res.sendFile(path.resolve(__dirname + '/../../favicon.ico'))
+    });
 };
