@@ -4,18 +4,15 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 module.exports = function (app, config) {
-    app.use(bodyParser.json())
-    app.use(bodyParser.urlencoded({ extended: true }));
-    
     app.use(function (req, res, next) {
         // Website you wish to allow to connect
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         
         // Request methods you wish to allow
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
         
         // Request headers you wish to allow
-        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
         
         // Set to true if you need the website to include cookies in the requests sent
         // to the API (e.g. in case you use sessions)
@@ -24,6 +21,9 @@ module.exports = function (app, config) {
         // Pass to next layer of middleware
         next();
     });
+    
+    app.use(bodyParser.json())
+    app.use(bodyParser.urlencoded({ extended: true }));
 
     app.listen(config.port, () => {
         console.log('Server is running on port ' + config.port);
