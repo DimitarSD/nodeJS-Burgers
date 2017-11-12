@@ -1,0 +1,29 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test-project",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/limelabs/backend-example-project.git"
+  },
+  "author": "Dimitar Dzhurenov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/limelabs/backend-example-project/issues"
+  },
+  "homepage": "https://gitlab.com/limelabs/backend-example-project#README",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.1"
+  }
+}
