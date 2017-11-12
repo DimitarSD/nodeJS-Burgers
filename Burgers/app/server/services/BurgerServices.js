@@ -4,15 +4,16 @@ var security = require('../utilities/security'),
     helper = require('../utilities/help-functions'),
     Burger = require('mongoose').model('Burger');
 
-// TODO - doesn't work
 function addBurger(request, response) {
+    var uuid = helper.generateUUID();
+
     var burger = {
         name: security.handleHtmlTags(request.body.name),
         burgerSize: security.handleHtmlTags(request.body.burgerSize),
         ingredients: request.body.ingredients,
         sauces: request.body.sauces,
         imageUrl: security.handleHtmlTags(request.body.imageUrl),
-        burgerId: request.body._id
+        burgerId: uuid
     };
 
     Burger.create(burger, function (error, burger) {

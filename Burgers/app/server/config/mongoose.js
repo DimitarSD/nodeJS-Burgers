@@ -13,7 +13,7 @@ module.exports = function (config) {
             return;
         }
 
-        // mongoose.connection.db.dropDatabase();
+        mongoose.connection.db.dropDatabase();
         console.log('Database up and running...');
     });
 
@@ -22,6 +22,6 @@ module.exports = function (config) {
     });
 
     // Seed initial data
-    // models.Burger.seedInitialBurgers();
+    models.Burger.seedInitialBurgers();
 };
 
