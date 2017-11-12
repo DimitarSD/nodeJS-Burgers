@@ -15,6 +15,6 @@ module.exports = function(app, db) {
 
     // Favicon
     app.get('/favicon.ico', function (req, res) {
-        res.sendFile(path.resolve(__dirname + '/../../favicon.ico'))
+        res.sendFile(path.resolve(__dirname + '/favicon.ico'))
     });
 };
