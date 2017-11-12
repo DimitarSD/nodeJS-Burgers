@@ -11,7 +11,7 @@ module.exports = {
     },
     production: {
         rootPath: rootPath,
-        db: 'mongodb://admin>:admin123@ds159845.mlab.com:59845/nodejs-burgers',
+        db: 'mongodb://admin:admin123@ds159845.mlab.com:59845/nodejs-burgers',
         port: process.env.PORT || 5000
     },
 }
