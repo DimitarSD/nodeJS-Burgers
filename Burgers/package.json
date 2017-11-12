@@ -9,16 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/limelabs/backend-example-project.git"
+    "url": "git+https://github.com/DimitarSD/nodeJS-Burgers.git"
   },
   "author": "Dimitar Dzhurenov",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/limelabs/backend-example-project/issues"
-  },
-  "homepage": "https://gitlab.com/limelabs/backend-example-project#README",
   "devDependencies": {
     "nodemon": "^1.12.1"
+  },
+  "engines": {
+    "node": "8.9.1"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
