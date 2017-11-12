@@ -1,9 +1,10 @@
 // server.js
+var env = process.env.NODE_ENV || 'dev'
 
 const express = require('express');
 const database = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
-const config = require('./app/server/config/config')['dev'];
+const config = require('./app/server/config/config')[env];
 
 const app = express();
 
